@@ -469,7 +469,10 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Mame Bou FALL</h3>
-              <p className="text-foreground/80 text-sm">Co-fondateur & Directeur Technique</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                Full Stack Developer chez Tresor Public | Élève ingénieur en IA & Big Data à l'ESP
+              </p>
+              <p className="text-foreground/70 text-sm mt-2">Co-fondateur</p>
             </Card>
 
             {/* Maire Alioune Awa SENE */}
@@ -492,7 +495,10 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Maire Alioune Awa SENE</h3>
-              <p className="text-foreground/80 text-sm">Co-fondatrice & Directrice Stratégie</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                Élève ingénieure en Intelligence Artificielle et Big Data à l'ESP
+              </p>
+              <p className="text-foreground/70 text-sm mt-2">Co-fondatrice</p>
             </Card>
 
             {/* Serigne Modou THIAM */}
@@ -515,7 +521,10 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Serigne Modou THIAM</h3>
-              <p className="text-foreground/80 text-sm">Co-fondateur & Directeur Innovation</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                Support IT chez Promobile | Élève ingénieur en IA & Big Data à l'ESP
+              </p>
+              <p className="text-foreground/70 text-sm mt-2">Co-fondateur</p>
             </Card>
           </div>
         </div>

@@ -105,6 +105,8 @@ Un guide détaillé est disponible dans `DEPLOYMENT_RAILWAY.md`. Rappel rapide :
 3. Activer le build `pnpm install` puis `pnpm build`
 4. Commande de démarrage Railway : `pnpm start`
 
+ Accès sur  : `https://snova.up.railway.app/`
+
 ## Contenu fonctionnel
 
 Le site met en avant :
@@ -125,5 +127,5 @@ Pour toute contribution :
 2. Ouvrir une PR détaillant les changements UX/UI
 3. Mettre à jour cette documentation si vous ajoutez des pages ou des scripts
 
-Bon développement 🚀
+
 
