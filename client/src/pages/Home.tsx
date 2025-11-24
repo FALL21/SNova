@@ -19,6 +19,32 @@ import { useState } from "react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const partners = [
+    {
+      // name: "VBS",
+      // description: "Prestations de services",
+      logo: "/partners/vbs.png",
+      initials: "VBS",
+    },
+    {
+      // name: "Berger High Tech",
+      // description: "",
+      logo: "/partners/techbridge.png",
+      initials: "BHT",
+    },
+    {
+      name: "Matos",
+      description: "Vente de matériel electronique et electromenager",
+      logo: "/partners/Matos.png",
+      // initials: "",
+    },
+    {
+      // name: "InnovEdu",
+      // description: "ÉdTech & formation continue",
+      // logo: "/partners/innovedu.png",
+      // initials: "IE",
+    },
+  ];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -55,6 +81,12 @@ export default function Home() {
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Projets
+            </button>
+            <button
+              onClick={() => scrollToSection("partners")}
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Partenaires
             </button>
             <button
               onClick={() => scrollToSection("expertise")}
@@ -100,6 +132,12 @@ export default function Home() {
                 className="text-sm font-medium hover:text-primary transition-colors text-left"
               >
                 Projets
+              </button>
+              <button
+                onClick={() => scrollToSection("partners")}
+                className="text-sm font-medium hover:text-primary transition-colors text-left"
+              >
+                Partenaires
               </button>
               <button
                 onClick={() => scrollToSection("expertise")}
@@ -332,6 +370,50 @@ export default function Home() {
                 Espace de création et d'expérimentation pour explorer les frontières de la technologie et développer les solutions de demain.
               </p>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-20 md:py-32 bg-card">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="text-primary font-semibold mb-2 uppercase tracking-wide">Partenaires</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ils nous font confiance</h2>
+            <p className="text-lg text-foreground/80">
+              Nous collaborons avec des acteurs majeurs pour accélérer l'adoption de solutions intelligentes en Afrique.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {partners.map((partner) => (
+              <Card key={partner.name} className="p-6 h-full">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={partner.logo}
+                      alt={`Logo ${partner.name}`}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-lg font-semibold text-primary">${partner.initials}</div>`;
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold text-primary">{partner.name}</h3>
+                    <p className="text-sm text-foreground/70">{partner.description}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-foreground/70 leading-relaxed">
+                  Partenaire stratégique de Smart Nova sur les projets IA, data ou transformation digitale.
+                </p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -658,6 +740,14 @@ export default function Home() {
                     className="hover:opacity-80 transition-opacity"
                   >
                     Projets
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("partners")}
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    Partenaires
                   </button>
                 </li>
                 <li>
