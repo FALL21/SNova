@@ -21,28 +21,20 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const partners = [
     {
-      // name: "VBS",
-      // description: "Prestations de services",
       logo: "/partners/vbs.png",
       initials: "VBS",
     },
     {
-      // name: "Berger High Tech",
-      // description: "",
       logo: "/partners/techbridge.png",
       initials: "BHT",
     },
     {
-      name: "Matos",
-      description: "Vente de matériel electronique et electromenager",
-      logo: "/partners/Matos.png",
-      // initials: "",
+      logo: "/partners/matos.png",
+      initials: "Matos",
     },
     {
-      // name: "InnovEdu",
-      // description: "ÉdTech & formation continue",
-      // logo: "/partners/innovedu.png",
-      // initials: "IE",
+      logo: "/partners/partner4.png",
+      initials: "SN",
     },
   ];
 
@@ -385,33 +377,24 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-center">
             {partners.map((partner) => (
-              <Card key={partner.name} className="p-6 h-full">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center overflow-hidden">
-                    <img
-                      src={partner.logo}
-                      alt={`Logo ${partner.name}`}
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = "none";
-                        const parent = target.parentElement;
-                        if (parent) {
-                          parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-lg font-semibold text-primary">${partner.initials}</div>`;
-                        }
-                      }}
-                    />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-lg font-semibold text-primary">{partner.name}</h3>
-                    <p className="text-sm text-foreground/70">{partner.description}</p>
-                  </div>
+              <Card key={partner.logo} className="p-6 h-full flex items-center justify-center">
+                <div className="w-full h-20 flex items-center justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={`Logo partenaire ${partner.initials || ""}`}
+                    className="max-h-20 object-contain"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = "none";
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.innerHTML = `<div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-lg font-semibold text-primary">${partner.initials || "SN"}</div>`;
+                      }
+                    }}
+                  />
                 </div>
-                <p className="text-sm text-foreground/70 leading-relaxed">
-                  Partenaire stratégique de Smart Nova sur les projets IA, data ou transformation digitale.
-                </p>
               </Card>
             ))}
           </div>
