@@ -25,17 +25,14 @@ export default function Home() {
       initials: "VBS",
     },
     {
-      logo: "/partners/techbridge.png",
-      initials: "BHT",
+      logo: "/partners/GLM.jpeg",
+      initials: "GLM",
     },
     {
       logo: "/partners/Matos.png",
       initials: "Matos",
     },
-    {
-      logo: "/partners/partner4.png",
-      initials: "SN",
-    },
+   
   ];
 
   const scrollToSection = (id: string) => {
