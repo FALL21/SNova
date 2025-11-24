@@ -618,6 +618,7 @@ export default function Home() {
                       <p className="text-sm font-medium">Téléphone</p>
                       <p className="text-foreground/80">+221 77 795 49 21</p>
                       <p className="text-foreground/80">+221 77 717 65 32</p>
+                      <p className="text-foreground/80">+221 77 785 65 41</p>
                     </div>
                   </div>
                 </div>
