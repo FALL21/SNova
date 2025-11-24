@@ -29,7 +29,7 @@ export default function Home() {
       initials: "BHT",
     },
     {
-      logo: "/partners/matos.png",
+      logo: "/partners/Matos.png",
       initials: "Matos",
     },
     {
